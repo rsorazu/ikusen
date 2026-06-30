@@ -1,0 +1,170 @@
+backend:
+  name: git-gateway
+  branch: main
+
+site_url: https://TU_USUARIO.github.io/TU_REPOSITORIO   # ← Aldatu
+
+media_folder: images
+public_folder: /images
+
+locale: es
+
+collections:
+
+  - name: site
+    label: "🌐 Web orokorra"
+    files:
+      - name: site
+        label: "Sarrera eta beharrezkoak"
+        file: content/site.json
+        format: json
+        fields:
+          - { label: "Izenburua", name: title, widget: string }
+          - { label: "Azpititulua", name: subtitle, widget: string }
+          - { label: "Hero titulua", name: hero_title, widget: string }
+          - { label: "Hero azpititulua", name: hero_subtitle, widget: text }
+          - label: "📢 Abisua"
+            name: announcement
+            widget: text
+            required: false
+          - { label: "Abisua aktibo", name: announcement_active, widget: boolean, default: false }
+          - { label: "Iraupen minimoa", name: min_duration, widget: string }
+          - { label: "Eskatutako planoak (testua)", name: min_planos, widget: text }
+          - { label: "Eskatutako muntaketa (testua)", name: min_muntaketa, widget: text }
+
+  - name: hizkuntza
+    label: "🎬 Ikus-entzunezko Hizkuntza"
+    files:
+      - name: hizkuntza
+        label: "Edukia"
+        file: content/hizkuntza.json
+        format: json
+        fields:
+          - { label: "Izenburua", name: title, widget: string }
+          - { label: "Deskribapena", name: description, widget: string }
+          - { label: "Sarrerako izenburua", name: intro_heading, widget: string }
+          - { label: "Sarrerako testua", name: intro_text, widget: text }
+          - label: "Elementuak (chip zerrenda)"
+            name: elements
+            widget: list
+            field: { label: "Elementua", name: item, widget: string }
+          - label: "Film adibideak"
+            name: examples
+            widget: list
+            label_singular: "Adibidea"
+            fields:
+              - { label: "Atalaren izenburua", name: title, widget: string }
+              - { label: "Filmaren izena", name: movie, widget: string }
+              - label: "Puntuak"
+                name: points
+                widget: list
+                field: { label: "Puntua", name: item, widget: string }
+              - { label: "Ondorioa", name: conclusion, widget: text }
+              - label: "Argazkia / fotograma"
+                name: photo
+                widget: object
+                fields:
+                  - { label: "Argazkia", name: image, widget: image, required: false }
+                  - { label: "Deskribapena", name: description, widget: text, required: false }
+          - label: "Plano motak"
+            name: plano_motak
+            widget: list
+            fields:
+              - { label: "Izena", name: name, widget: string }
+              - { label: "Deskribapena", name: desc, widget: string }
+              - { label: "Erabilera", name: use, widget: string }
+          - { label: "Soinua — izenburua", name: soinua_heading, widget: string }
+          - { label: "Soinua — sarrera", name: soinua_intro, widget: text }
+          - label: "Soinua — zertarako"
+            name: soinua_zertarako
+            widget: list
+            field: { label: "Erabilera", name: item, widget: string }
+          - label: "Soinua — gomendioak"
+            name: soinua_gomendioak
+            widget: list
+            field: { label: "Gomendioa", name: item, widget: string }
+          - { label: "Muntaketa — izenburua", name: muntaketa_heading, widget: string }
+          - { label: "Muntaketa — sarrera", name: muntaketa_intro, widget: text }
+          - label: "Muntaketa — zer da"
+            name: muntaketa_zer_da
+            widget: list
+            field: { label: "Puntua", name: item, widget: string }
+          - label: "Muntaketa motak"
+            name: muntaketa_motak
+            widget: list
+            fields:
+              - { label: "Izena", name: name, widget: string }
+              - { label: "Deskribapena", name: desc, widget: string }
+
+  - name: proiektua
+    label: "🎯 Proiektua"
+    files:
+      - name: proiektua
+        label: "Faseak eta tresnak"
+        file: content/proiektua.json
+        format: json
+        fields:
+          - { label: "Izenburua", name: title, widget: string }
+          - { label: "Deskribapena", name: description, widget: string }
+          - { label: "Erronka — izenburua", name: context_heading, widget: string }
+          - label: "Erronka — paragrafoak"
+            name: context_paragraphs
+            widget: list
+            field: { label: "Paragrafoa", name: item, widget: text }
+          - label: "Faseak"
+            name: phases
+            widget: list
+            label_singular: "Fasea"
+            fields:
+              - { label: "Zenbakia", name: num, widget: string }
+              - { label: "Izenburua", name: title, widget: string }
+              - { label: "Saioa", name: session, widget: string }
+              - { label: "Edukia", name: content, widget: text }
+              - label: "Kontrol-puntua"
+                name: checkpoint
+                widget: list
+                required: false
+                field: { label: "Elementua", name: item, widget: string }
+              - label: "Erronkak"
+                name: challenges
+                widget: list
+                required: false
+                fields:
+                  - { label: "Izarrak", name: stars, widget: string }
+                  - { label: "Izenburua", name: title, widget: string }
+                  - { label: "Testua", name: text, widget: string }
+          - { label: "Tresnak — izenburua", name: tools_heading, widget: string }
+          - label: "Tresnak"
+            name: tools
+            widget: list
+            fields:
+              - { label: "Ikonoa", name: icon, widget: string }
+              - { label: "Izena", name: name, widget: string }
+              - { label: "Deskribapena", name: desc, widget: text }
+
+  - name: entrega
+    label: "📋 Entrega"
+    files:
+      - name: entrega
+        label: "Zer entregatu"
+        file: content/entrega.json
+        format: json
+        fields:
+          - { label: "Izenburua", name: title, widget: string }
+          - { label: "Deskribapena", name: description, widget: string }
+          - label: "Entregatu beharrekoak"
+            name: items
+            widget: list
+            fields:
+              - { label: "Zenbakia", name: num, widget: string }
+              - { label: "Izenburua", name: title, widget: string }
+              - { label: "Formatua", name: format, widget: string }
+              - label: "Edukia"
+                name: content
+                widget: list
+                field: { label: "Elementua", name: item, widget: string }
+          - label: "Formato-aholkuak"
+            name: format_tips
+            widget: list
+            field: { label: "Aholkua", name: item, widget: string }
+          - { label: "Epea", name: deadline, widget: string }

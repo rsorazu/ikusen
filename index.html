@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bideo Proiektua — IKT</title>
+  <meta property="og:title" content="Bideo Proiektua — Ideiatik pantailara">
+  <meta property="og:description" content="Film labur bat sortuko duzu: gidoia, storyboard, grabaketa eta muntaketa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .loading-screen {
+      position: fixed; inset: 0;
+      background: #15130F;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 16px;
+      z-index: 9999;
+      transition: opacity 0.4s;
+    }
+    .loading-screen.hidden { opacity: 0; pointer-events: none; }
+    .loading-clap {
+      width: 36px; height: 26px;
+      position: relative;
+      animation: clapPulse 1s infinite;
+    }
+    .loading-clap::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 9px;
+      background: repeating-linear-gradient(45deg, #D8432E 0 5px, #F2EDE3 5px 10px);
+      border-radius: 2px 2px 0 0;
+    }
+    .loading-clap::after {
+      content: ''; position: absolute; top: 9px; left: 0; right: 0; bottom: 0;
+      background: #F2EDE3; border-radius: 0 0 2px 2px;
+    }
+    @keyframes clapPulse { 0%,100%{transform:scale(1) rotate(0deg)} 50%{transform:scale(1.05) rotate(-3deg)} }
+    .loading-text { font-family: 'Inter', sans-serif; font-size: 0.85rem; color: #B7AD9A; }
+
+    .summary-card {
+      background: #1C1A15;
+      border: 1px solid #332D24;
+      border-left: 3px solid #4E8B86;
+      border-radius: 12px;
+      padding: 26px;
+      margin: 32px 0 0;
+    }
+    .summary-card h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem; letter-spacing: 0.01em;
+      color: #4E8B86; margin-bottom: 10px;
+    }
+    .summary-card .summary-intro { font-size: 0.9rem; color: #B7AD9A; margin-bottom: 14px; }
+    .summary-points { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+    .summary-points li { display: flex; gap: 10px; font-size: 0.88rem; color: #F2EDE3; }
+    .summary-points li::before { content: '✓'; color: #4E8B86; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-clap"></div>
+  <div class="loading-text">Edukia kargatzen...</div>
+</div>
+
+<!-- ══ SIDEBAR ══════════════════════════════════════════════════ -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="logo">
+      <div class="logo-clap"></div>
+      <span>BIDEO<em>proi</em></span>
+    </div>
+    <button class="sidebar-close" id="sidebarClose" aria-label="Menua itxi">✕</button>
+  </div>
+  <div class="sidebar-section">
+    <span class="sidebar-label">IKT · Bideo proiektua</span>
+  </div>
+  <ul class="nav-list" id="navList">
+    <li class="nav-item active" data-unit="intro">
+      <div class="nav-reel-dot" style="--dot-color:#D8432E"></div>
+      <div class="nav-content">
+        <span class="nav-tag">Sarrera</span>
+        <span class="nav-title">Erronka</span>
+      </div>
+    </li>
+    <li class="nav-divider"></li>
+    <li class="nav-item" data-unit="hizkuntza">
+      <div class="nav-reel-dot" style="--dot-color:#D9A441"></div>
+      <div class="nav-content">
+        <span class="nav-tag">Erref.</span>
+        <span class="nav-title">Ikus-entzunezko Hizkuntza</span>
+        <span class="nav-sub">Planoak · Soinua · Muntaketa</span>
+      </div>
+    </li>
+    <li class="nav-item" data-unit="proiektua">
+      <div class="nav-reel-dot" style="--dot-color:#4E8B86"></div>
+      <div class="nav-content">
+        <span class="nav-tag">Proiektua</span>
+        <span class="nav-title">Faseak eta Tresnak</span>
+        <span class="nav-sub">Gidoia · Storyboard · Grabaketa</span>
+      </div>
+    </li>
+    <li class="nav-item" data-unit="entrega">
+      <div class="nav-reel-dot" style="--dot-color:#8B6FB0"></div>
+      <div class="nav-content">
+        <span class="nav-tag">Entrega</span>
+        <span class="nav-title">Zer entregatu</span>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<!-- ══ TOPBAR ═══════════════════════════════════════════════════ -->
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-label="Menua ireki">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="topbar-title" id="topbarTitle">Bideo Proiektua</div>
+</header>
+
+<!-- ══ MAIN ══════════════════════════════════════════════════════ -->
+<main class="main" id="main">
+
+  <!-- ── INTRO ─────────────────────────────────────────────── -->
+  <section class="unit active" id="unit-intro">
+    <div class="hero-screening">
+      <div class="hero-eyebrow">IKT · Bideo Proiektua</div>
+      <h1 class="hero-title">Ideiatik<br><em>pantailara</em></h1>
+      <p class="hero-sub" id="heroSub">2 minutuko film labur bat sortuko duzu: gidoia, storyboard, grabaketa eta muntaketa — zuen istorioa kontatzeko.</p>
+      <div class="filmstrip" id="filmstrip"></div>
+    </div>
+    <div class="content-grid">
+      <div class="section-block">
+        <h2 class="section-title">Beharrezkoa</h2>
+        <p class="section-desc">Proiektua amaitzeko, hauek izan behar ditu zure bideoak:</p>
+        <div class="req-grid" id="reqGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic units -->
+  <section class="unit" id="unit-hizkuntza"><div class="unit-loading">Kargatzen...</div></section>
+  <section class="unit" id="unit-proiektua"><div class="unit-loading">Kargatzen...</div></section>
+  <section class="unit" id="unit-entrega"><div class="unit-loading">Kargatzen...</div></section>
+
+</main>
+
+<div class="overlay" id="overlay"></div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+{
+  "id": "hizkuntza",
+  "title": "Ikus-entzunezko Hizkuntza",
+  "eyebrow": "Erreferentzia",
+  "description": "Ikusmenaren eta entzumenaren bidez transmititzen duguna",
+
+  "intro_heading": "Zerk egiten du bideo bat interesgarri?",
+  "intro_text": "Pelikula on batek ez du soilik istorio ona kontatzen — nola kontatzen duen ere garrantzitsua da. Plano motak, soinua, muntaketa eta koloreak erabiltzen ditu zuengan emozioak sortzeko, istorioa hitzik gabe ere ulertarazteko.",
+
+  "examples": [
+    {
+      "title": "Koloreen erabilera",
+      "movie": "Film adibidea 1",
+      "points": [
+        "Koloreek emozioak eta izaerak transmititzen dituzte",
+        "Muntaketa azkarra akzio eszenetan, motela emozio eszenetan"
+      ],
+      "conclusion": "Koloreek eta muntaketak pertsonaiaren emozioak transmititzen dituzte",
+      "photo": { "image": "", "description": "Film honetako fotograma adierazgarri bat" }
+    },
+    {
+      "title": "Soinua narratzaile gisa",
+      "movie": "Film adibidea 2",
+      "points": [
+        "Lehen planoen erabilera handia emozioak erakusteko",
+        "Edizioaren erritmoak tentsioa sortzen du"
+      ],
+      "conclusion": "Soinuak eta muntaketak tentsioa eta erritmo bizkorra sortzen dute",
+      "photo": { "image": "", "description": "Film honetako fotograma adierazgarri bat" }
+    },
+    {
+      "title": "Kamera eta oroitzapenak",
+      "movie": "Film adibidea 3",
+      "points": [
+        "Enkuadre intimoak eta kamara ezberdinen erabilera",
+        "Irudi kalitate ezberdinek denbora pasa dela adierazten dute"
+      ],
+      "conclusion": "Kameraren enkuadreek eta irudiaren estiloak oroitzapen baten sentsazioa sortzen dute",
+      "photo": { "image": "", "description": "Film honetako fotograma adierazgarri bat" }
+    },
+    {
+      "title": "Koloreak bi mundu bereizteko",
+      "movie": "Film adibidea 4",
+      "points": [
+        "Kolore bakoitzak mundu desberdin bat irudikatzen du",
+        "Koloreen aldaketak istorioaren testuingurua adierazten du"
+      ],
+      "conclusion": "Koloreak bi munduak bereizteko erabiltzen dira",
+      "photo": { "image": "", "description": "Film honetako fotograma adierazgarri bat" }
+    },
+    {
+      "title": "Argiztapena eta misterioa",
+      "movie": "Film adibidea 5",
+      "points": [
+        "Argi naturalaren erabilera",
+        "Itzal eta erdiluneen erabilera misterioa sortzeko"
+      ],
+      "conclusion": "Argiztapenak giro intimo eta emozionala sortzen du",
+      "photo": { "image": "", "description": "Film honetako fotograma adierazgarri bat" }
+    }
+  ],
+
+  "elements": [
+    "Plano motak", "Angeluak", "Soinua/Musika", "Muntaketa",
+    "Argiztapena", "Kolorea", "Kamera mugimenduak", "Lenteak"
+  ],
+
+  "plano_motak": [
+    { "name": "Plano orokorra", "desc": "Espazioa erakutsi, ikuslea kokatu", "use": "Eszena baten hasieran, lekua aurkezteko" },
+    { "name": "Plano osoa", "desc": "Oinetatik burura, gorputz hizkuntza erakutsi", "use": "Akzioa erakusteko" },
+    { "name": "Plano ertaina", "desc": "Gerritik gora — emozioaren eta akzioaren arteko oreka", "use": "Elkarrizketetan ohikoena" },
+    { "name": "Lehen planoa", "desc": "Aurpegia bakarrik", "use": "Emozioak erakusteko, pertsonaiarekin konektatzeko" },
+    { "name": "Xehetasun planoa", "desc": "Atal zehatz bat — begiak, eskuak, objektu bat...", "use": "Xehetasunei atentzioa emateko" },
+    { "name": "Plano subjektiboa", "desc": "Pertsonaiaren ikuspuntua", "use": "Ikuslea istorioan sartzeko" }
+  ],
+
+  "soinua_heading": "Soinua",
+  "soinua_intro": "Soinua ikus-entzunezko proiektuaren %50 da. Ona bada, bideoak funtzionatzen du. Txarra bada, EZ.",
+  "soinua_zertarako": [
+    "Tentsioa, beldurra edo poza sortu",
+    "Pertsonaien emozioak transmititu",
+    "Denborak eta erritmoa markatu",
+    "Informazioa eman bisualki erakutsi gabe"
+  ],
+  "soinua_gomendioak": [
+    "Emozioa sakontzen duen musika gehitu",
+    "Soinu efektu sinpleak grabatu (ateak, pausoak, objektuen soinuak...)",
+    "Bolumenak edizioan kontrolatu",
+    "Ez erabili bideoaren soinua zuzenean — kanpo mikrofonoak erabili (adibidez beste mugikor bat)"
+  ],
+
+  "muntaketa_heading": "Muntaketa",
+  "muntaketa_intro": "Istorioa osatzen du. Muntaketak erabakitzen du bideoak emozionatzen duen ala ez.",
+  "muntaketa_zer_da": [
+    "Grabatutako planoak ordenean jarri",
+    "Plano horiek konektatu",
+    "Ikuslearen atentzioa gidatu",
+    "Istorioaren erritmoa kontrolatu"
+  ],
+  "muntaketa_motak": [
+    { "name": "Ebaketa zuzena", "desc": "Planoen arteko aldaketa normala" },
+    { "name": "Ilunera beltza (fundido a negro)", "desc": "Eszena aldaketa — denbora pasatzen da" },
+    { "name": "Muntaketa azkarra", "desc": "Tentsioa sortzeko" },
+    { "name": "Muntaketa motela", "desc": "Lasaitasuna edo hausnarketa transmititzeko" }
+  ]
+}

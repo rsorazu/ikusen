@@ -1,0 +1,51 @@
+{
+  "id": "entrega",
+  "title": "Entrega",
+  "eyebrow": "Zer entregatu behar duzu",
+  "description": "Hiru dokumentu entregatu behar dituzu Microsoft Teams bidez",
+
+  "items": [
+    {
+      "num": "1",
+      "title": "Gidoia",
+      "format": "Word dokumentua",
+      "content": [
+        "Izenburua eta esperotako iraupena",
+        "Sinopsi motza (zertaz doa, ze pertsonaia)",
+        "Gutxienez 3 eszena, bakoitzean zer gertatzen den azalduta",
+        "Elkarrizketak zehatz idatzita",
+        "Ezaugarri teknikoak: plano motak, soinu efektuak, musika"
+      ]
+    },
+    {
+      "num": "2",
+      "title": "Storyboard",
+      "format": "Eskaneatutako argazkiak edo PDF",
+      "content": [
+        "Eszena bakoitzeko gutxienez 2 bineta",
+        "Plano mota argi adierazita bineta bakoitzean",
+        "Angeluak eta pertsonaien kokapena marraztuta"
+      ]
+    },
+    {
+      "num": "3",
+      "title": "Bideo finala",
+      "format": "MP4 fitxategia",
+      "content": [
+        "Gutxienez 2 minutuko iraupena",
+        "4 plano-mota desberdin erabilita (orokorra, ertaina, lehena, xehetasuna)",
+        "Angelu aldaketa bat gutxienez",
+        "1 ilunera beltza eta 1 muntaketa azkar erabilita",
+        "Soinua argi entzuten dela"
+      ]
+    }
+  ],
+
+  "format_tips": [
+    "Hiru dokumentuak entrega bera batera bidali",
+    "Bideoaren izena: TaldeIzena_BideoIzenburua.mp4",
+    "Bideoa ezin bada Teams-en igo tamaina dela eta, partekatu Drive edo antzeko bidez esteka batekin"
+  ],
+
+  "deadline": "Epea: irakasleak Teams-en zehaztuko du"
+}

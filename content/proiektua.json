@@ -1,0 +1,120 @@
+{
+  "id": "proiektua",
+  "title": "Proiektua",
+  "eyebrow": "Zer egin behar duzu",
+  "description": "Ideiatik pantailara: zuen istorioa sortzen",
+
+  "context_heading": "Erronka",
+  "context_paragraphs": [
+    "2 minutuko gutxieneko iraupena duen film labur bat sortuko duzu, ikasitako ikus-entzunezko hizkuntza erabiliz. Istorioa sinplea izan daiteke — garrantzitsuena ez da zer kontatzen duzun, baizik eta NOLA kontatzen duzun."
+  ],
+
+  "requirements": {
+    "heading": "Beharrezkoa",
+    "planos": {
+      "title": "Planoak",
+      "items": [
+        "1 plano orokorra",
+        "1 plano ertaina",
+        "1 lehen planoa",
+        "1 plano xehetasuna",
+        "Angelu aldaketak (nahi duzuena erabili, bat gutxienez)"
+      ]
+    },
+    "soinua": {
+      "title": "Soinua",
+      "items": [
+        "Musika, efektuak — istorioa kontatzen laguntzen dutenak"
+      ]
+    },
+    "muntaketa": {
+      "title": "Muntaketa",
+      "items": [
+        "1 ilunera beltza",
+        "1 muntaketa azkarra",
+        "Istoriori laguntzen dion erritmoa"
+      ]
+    },
+    "iraupena": {
+      "title": "Iraupen minimoa",
+      "value": "2 minutu"
+    }
+  },
+
+  "phases": [
+    {
+      "num": "1",
+      "title": "Ideiazioa",
+      "session": "1. saioa",
+      "content": "Pentsatu zer istorio kontatu nahi duzuen. Ez da zertan konplexua izan behar — istorio sinple batek ondo kontatuta funtziona dezake hobeto konplexu batek gaizki kontatuta baino. Pentsatu: nor dira pertsonaiak? Zer gertatzen da? Non eta noiz?",
+      "checkpoint": [
+        "Istorioaren ideia nagusia argi dago",
+        "Pertsonaiak definitu dira",
+        "Talde osoak ados daude ideiarekin"
+      ]
+    },
+    {
+      "num": "2",
+      "title": "Gidoia idatzi",
+      "session": "1–2. saioa",
+      "content": "Idatzi gidoia, ondoko atalekin: izenburua eta esperotako iraupena, sinopsi motza, gutxienez 3 eszena ezberdin (bakoitzean zer gertatzen den azalduz), elkarrizketak zehatz idatzita, eta ezaugarri teknikoak (plano motak, soinu efektuak, musika).",
+      "checkpoint": [
+        "Gutxienez 3 eszena ezberdin daude",
+        "Elkarrizketak zehazki idatzita daude",
+        "Plano-mota bakoitza zehaztuta dago eszena bakoitzean"
+      ]
+    },
+    {
+      "num": "3",
+      "title": "Storyboard egin",
+      "session": "2. saioa",
+      "content": "Marraztu eszena bakoitza — gutxienez 2 bineta eszena bakoitzeko. Adierazi: plano mota (gertu/urrun), angeluak, emozioak nola erakutsiko diren, eta gauzen kokapena planoan.",
+      "checkpoint": [
+        "Eszena guztiak marraztuta daude",
+        "Plano-motak argi adierazita daude bineta bakoitzean",
+        "Kameraren kokapena ulertzen da"
+      ]
+    },
+    {
+      "num": "4",
+      "title": "Grabatu",
+      "session": "3–4. saioa",
+      "content": "Grabatu eszena guztiak storyboard-ari jarraituz. Errespetatu eskatutako plano-motak eta angeluak. Kontuz soinuarekin — erabili kanpo mikrofono bat (beste mugikor bat, adibidez) bideoaren soinu propioa erabili beharrean.",
+      "checkpoint": [
+        "Plano guztiak grabatuta daude (orokorra, ertaina, lehena, xehetasuna)",
+        "Angelu aldaketa bat gutxienez erabili da",
+        "Soinua argi entzuten da"
+      ]
+    },
+    {
+      "num": "5",
+      "title": "Muntatu",
+      "session": "4–5. saioa",
+      "content": "Editatu bideoa. Ordenatu planoak, gehitu musika eta soinu efektuak, eta erabili gutxienez ilunera beltz bat eta muntaketa azkar bat. Kontrolatu bolumenak eta egiaztatu erritmoa istorioarekin bat datorrela.",
+      "checkpoint": [
+        "1 ilunera beltza erabili da",
+        "1 muntaketa azkarra erabili da",
+        "Bolumenak orekatuta daude",
+        "Bideoak 2 minutu gutxienez irauten du"
+      ]
+    },
+    {
+      "num": "★",
+      "title": "Erronka zabalgarria",
+      "session": "Aukerazkoa",
+      "challenges": [
+        { "stars": "★", "title": "Plano subjektiboa", "text": "Gehitu pertsonaia baten ikuspuntutik grabatutako plano bat" },
+        { "stars": "★", "title": "Kolore-paleta", "text": "Erabaki kolore nagusi bat eta erabili film osoan zehar emozio jakin bat transmititzeko" },
+        { "stars": "★★", "title": "Argiztapen propioa", "text": "Esperimentatu argi naturalarekin giro desberdinak sortzeko" }
+      ]
+    }
+  ],
+
+  "tools_heading": "Tresnak",
+  "tools": [
+    { "icon": "📝", "name": "Gidoia", "desc": "Idatzi istorioa eszenaz eszena, elkarrizketak eta ezaugarri teknikoak barne." },
+    { "icon": "🎬", "name": "Storyboard", "desc": "Marraztu eszena bakoitza irudien bidez — gidoiaren itzulpen bisuala." },
+    { "icon": "📱", "name": "Grabazio-gailua", "desc": "Mugikorra edo kamera. Kanpo mikrofonoa gomendatua." },
+    { "icon": "✂️", "name": "Edizio-aplikazioa", "desc": "CapCut, iMovie edo antzeko bat muntaketa egiteko." }
+  ]
+}
