@@ -60,6 +60,11 @@ collections:
                 widget: list
                 field: { label: "Puntua", name: item, widget: string }
               - { label: "Ondorioa", name: conclusion, widget: text }
+              - label: "YouTube ID (aukerazkoa)"
+                name: youtube_id
+                widget: string
+                required: false
+                hint: "youtube.com/watch?v=XXXX URLeko XXXX zatia"
               - label: "Argazkia / fotograma"
                 name: photo
                 widget: object
