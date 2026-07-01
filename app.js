@@ -17,7 +17,16 @@ async function loadAllContent() {
 
 // ── Helpers ──────────────────────────────────────────────────────
 
-function photoArea(photo, ratio) {
+function photoArea(photo, youtubeId) {
+  // YouTube embed takes priority
+  if (youtubeId) {
+    return `<div class="movie-photo-area" style="padding:0;background:#000">
+      <iframe style="width:100%;aspect-ratio:16/9;border:none;display:block"
+        src="https://www.youtube.com/embed/${youtubeId}"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen loading="lazy"></iframe>
+    </div>`;
+  }
   if (!photo) return '<div class="movie-photo-area"><div class="movie-photo-ph"><div class="movie-photo-ph-icon">🎬</div></div></div>';
   if (photo.image && photo.image.match(/\.(jpg|jpeg|png|webp|gif)$/i)) {
     return `<div class="movie-photo-area"><img src="${photo.image}" alt="${photo.description||''}" class="movie-photo-real"></div>`;
@@ -91,7 +100,7 @@ function renderHizkuntza() {
 
   const moviesHTML = (d.examples||[]).map(e => `
     <div class="movie-card">
-      ${photoArea(e.photo)}
+      ${photoArea(e.photo, e.youtube_id)}
       <div class="movie-body">
         <div class="movie-name">${e.movie}</div>
         <div class="movie-title">${e.title}</div>
